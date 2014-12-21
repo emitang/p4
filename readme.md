@@ -3,10 +3,10 @@
 http://p4.emilytang.me
 
 # Description
-Bar Buddy: 
+Speakeasy: an online recipe book for cocktails. Users can create accounts and record their own recipes. All IBA-standard cocktails come preloaded. 
 
 # Demo
-My demo is up on Jing screencast: http://screencast.com/t/e2pBJKSd0c9
+My demo is up on Jing screencast: http://screencast.com/t/CLaKuUbrsb
 
 # Details for Teaching Team
 

@@ -59,11 +59,17 @@ Route::get('/cocktailsned', function()
 
 Route::get('/cocktailsa', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->primary == "Absinthe")
-            $cocktailsa[] = $cocktail;
+        if ($plcocktail->primary == "Absinthe")
+            $cocktailsa[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->primary == "Absinthe")
+            $cocktailsa[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsa);
 
@@ -71,11 +77,17 @@ Route::get('/cocktailsa', function()
 
 Route::get('/cocktailsb', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->primary == "Brandy")
-            $cocktailsb[] = $cocktail;
+        if ($plcocktail->primary == "Brandy")
+            $cocktailsb[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->primary == "Brandy")
+            $cocktailsb[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsb);
 
@@ -83,11 +95,17 @@ Route::get('/cocktailsb', function()
 
 Route::get('/cocktailsc', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->primary == "Cachaça")
-            $cocktailsc[] = $cocktail;
+        if ($plcocktail->primary == "Cachaça")
+            $cocktailsc[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->primary == "Cachaça")
+            $cocktailsc[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsc);
 
@@ -95,11 +113,17 @@ Route::get('/cocktailsc', function()
 
 Route::get('/cocktailsch', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->primary == "Champagne")
-            $cocktailsch[] = $cocktail;
+        if ($plcocktail->primary == "Champagne")
+            $cocktailsch[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->primary == "Champagne")
+            $cocktailsch[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsch);
 
@@ -107,11 +131,17 @@ Route::get('/cocktailsch', function()
 
 Route::get('/cocktailsg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->primary == "Gin")
-            $cocktailsg[] = $cocktail;
+        if ($plcocktail->primary == "Gin")
+            $cocktailsg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->primary == "Gin")
+            $cocktailsg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsg);
 
@@ -137,23 +167,34 @@ Route::get('/cocktailsr', function()
 
 Route::get('/cocktailst', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->primary == "Tequila")
-            $cocktailst[] = $cocktail;
+        if ($plcocktail->primary == "Tequila")
+            $cocktailst[] = $plcocktail;
     }
-    return View::make('cocktailsdisplay')->with('cocktails', $cocktailst);
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->primary == "Tequila")
+            $cocktailst[] = $ucocktail;
+    }    return View::make('cocktailsdisplay')->with('cocktails', $cocktailst);
 
 });
 
 Route::get('/cocktailsv', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->primary == "Vodka")
-            $cocktailsv[] = $cocktail;
+        if ($plcocktail->primary == "Vodka")
+            $cocktailsv[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->primary == "Vodka")
+            $cocktailsv[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsv);
 
@@ -161,11 +202,17 @@ Route::get('/cocktailsv', function()
 
 Route::get('/cocktailsw', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->primary == "Whiskey")
-            $cocktailsw[] = $cocktail;
+        if ($plcocktail->primary == "Whiskey")
+            $cocktailsw[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->primary == "Whiskey")
+            $cocktailsw[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsw);
 
@@ -173,11 +220,17 @@ Route::get('/cocktailsw', function()
 
 Route::get('/cocktailscg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->glass == "Cocktail Glass")
-            $cocktailscg[] = $cocktail;
+        if ($plcocktail->glass == "Cocktail Glass")
+            $cocktailscg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->glass == "Cocktail Glass")
+            $cocktailscg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailscg);
 
@@ -185,11 +238,17 @@ Route::get('/cocktailscg', function()
 
 Route::get('/cocktailscolg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->glass == "Collins Glass")
-            $cocktailscolg[] = $cocktail;
+        if ($plcocktail->glass == "Collins Glass")
+            $cocktailscolg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->glass == "Collins Glass")
+            $cocktailscolg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailscolg);
 
@@ -197,11 +256,17 @@ Route::get('/cocktailscolg', function()
 
 Route::get('/cocktailscofg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->glass == "Coffee Glass")
-            $cocktailscofg[] = $cocktail;
+        if ($plcocktail->glass == "Coffee Glass")
+            $cocktailscofg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->glass == "Coffee Glass")
+            $cocktailscofg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailscofg);
 
@@ -209,11 +274,17 @@ Route::get('/cocktailscofg', function()
 
 Route::get('/cocktailshg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->glass == "Highball Glass")
-            $cocktailshg[] = $cocktail;
+        if ($plcocktail->glass == "Highball Glass")
+            $cocktailshg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->glass == "Highball Glass")
+            $cocktailshg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailshg);
 
@@ -221,11 +292,17 @@ Route::get('/cocktailshg', function()
 
 Route::get('/cocktailshurg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->glass == "Hurricane Glass")
-            $cocktailshurg[] = $cocktail;
+        if ($plcocktail->glass == "Hurricane Glass")
+            $cocktailshurg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->glass == "Hurricane Glass")
+            $cocktailshurg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailshurg);
 
@@ -233,11 +310,17 @@ Route::get('/cocktailshurg', function()
 
 Route::get('/cocktailsmargg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->glass == "Margarita Glass")
-            $cocktailsmargg[] = $cocktail;
+        if ($plcocktail->glass == "Margarita Glass")
+            $cocktailsmargg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->glass == "Margarita Glass")
+            $cocktailsmargg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsmargg);
 
@@ -245,11 +328,17 @@ Route::get('/cocktailsmargg', function()
 
 Route::get('/cocktailsmartg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->glass == "Martini Glass")
-            $cocktailsmartg[] = $cocktail;
+        if ($plcocktail->glass == "Martini Glass")
+            $cocktailsmartg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->glass == "Martini Glass")
+            $cocktailsmartg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsmartg);
 
@@ -257,11 +346,17 @@ Route::get('/cocktailsmartg', function()
 
 Route::get('/cocktailsofg', function()
 {
-    $cocktailsdb = DB::table('plcocktails')->get();
-    foreach ($cocktailsdb as $cocktail)
+    $plcocktailsdb = DB::table('plcocktails')->get();
+    $ucocktailsdb = DB::table('ucocktails')->get();
+    foreach ($plcocktailsdb as $plcocktail)
     {
-        if ($cocktail->glass == "Old Fashioned Glass")
-            $cocktailsofg[] = $cocktail;
+        if ($plcocktail->glass == "Old Fashioned Glass")
+            $cocktailsofg[] = $plcocktail;
+    }
+    foreach ($ucocktailsdb as $ucocktail)
+    {
+        if ($ucocktail->glass == "Old Fashioned Glass")
+            $cocktailsofg[] = $ucocktail;
     }
     return View::make('cocktailsdisplay')->with('cocktails', $cocktailsofg);
 
