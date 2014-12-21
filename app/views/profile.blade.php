@@ -7,9 +7,24 @@
 <div class="body-wrapper">
 	<h2 class="body-header">Profile</h2>
 
-	<img src="https://m1.behance.net/rendition/modules/1979498/disp/1408261262456294.jpg" id="greeter">
+	<h3 class="fancy">My Cocktails</h3>
+	<div class="list-wrapper">
+		@if (empty($cocktails))
+			<p class="fontother">You don't have any cocktails yet!</p>
+		@else
+			@foreach ($cocktails as $cocktail)
+		    	<h3 class="fontother"><strong>{{ $cocktail->name }}</strong></h3>
+		        <p class="fontother"><strong>Primary Alcohol: </strong>{{ $cocktail->primary }}</p>
+		        <p class="fontother"><strong>Ingredients: </strong>{{ $cocktail->ingredients }}</p>
+		        <p class="fontother"><strong>Glass: </strong>{{ $cocktail->glass }}</p>
+		        <p class="fontother"><strong>How to Make: </strong>{{ $cocktail->info }}</p>
+		        <br><br>
+		    @endforeach
+		@endif
+		<br><br><br><br><br><br>
+	</div>
 
-	<p class="fancy">Speakeasy is your personal online recipe book for cocktails. The website listings include all IBA-standard cocktails. Create your own account and login to favorite drinks and add your own recipes.</p>
+	<h3 class="fontother"><a href="/logout">Logout</a></h3>
 </div>
 
 @stop

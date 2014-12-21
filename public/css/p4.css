@@ -39,6 +39,10 @@ body#profile a#profilenav {
 	font-family: 'Calligraffitti', cursive;
 }
 
+.fontother {
+	font-family: 'Poiret One', cursive;
+}
+
 .footer-wrapper {
 	background-color: #D1D4B4;
 	text-indent: 7%;
@@ -50,11 +54,25 @@ body#profile a#profilenav {
 	bottom: 0;
 	float: bottom;
 	border-top-style: solid;
-
+	font-family: 'Poiret One', cursive;
 }
 
 #greeter {
-	margin-left: 20px
+	margin-left: 20px;
+}
+
+.item-pic {
+	display: block;
+	height: 200px;
+	border: solid;
+	border-width: 1px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.list-wrapper {
+	text-align: center;
 }
 
 .nav-bar {

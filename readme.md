@@ -13,4 +13,5 @@ My demo is up on Jing screencast: http://screencast.com/t/e2pBJKSd0c9
 
 # Outside Code
 The Laravel framework was used in this project: http://laravel.com <br>
-Some nice Google fonts were used to make my pages look nice: http://www.google.com/fonts
+Some nice Google fonts were used to make my pages look nice: http://www.google.com/fonts <br>
+The Laravel Debugbar package was used: https://packagist.org/packages/barryvdh/laravel-debugbar <br>

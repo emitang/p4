@@ -5,6 +5,7 @@
 	<title>@yield('title','Speakeasy')</title>
 	<link rel='stylesheet' href='css/p4.css' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
 	@yield('head')
 
@@ -27,10 +28,10 @@
 
 	@yield('body')
 
-	<div class="footer-wrapper"> {{-- a nice bronzey color to go with the speakeasy theme --}}
+	<div class="footer-wrapper">
 		<h5>Contact Information</h5>
 		<ul>
-			<li>emitang@mit.edu</li> {{-- maybe make it link to their default mail thing? --}}
+			<li><a href ='mailto:emitang@mit.edu'>email</li>
 			<li><a href='github.com/emitang'>github</li>
 		</ul>
 	<div>
